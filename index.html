@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body ng-controller="DemoCtrl">
+    <br><br>
     <div class="row">
       <div class="col-sm-2 col-sm-offset-5">
         <div simple-calendar number-of-weeks="5" start-date="StartDate" end-date="EndDate"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 col-sm-offset-5">
+        $scope.StartDate = {{ StartDate | date:'shortDate' }}
+        $scope.EndDate = {{ EndDate | date:'shortDate' }}
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -20,6 +27,10 @@
     <script src="js/angular-simple-calendar/directive.min.js"></script>
     <script>
       var app = angular.module('DemoApp', ['simpleCalendar']);
+      app.controller('DemoCtrl',function($scope){
+        $scope.StartDate = new Date();
+        $scope.EndDate = new Date();
+      })
     </script>
   </body>
 </html>
