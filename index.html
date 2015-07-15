@@ -16,10 +16,11 @@
         <div simple-calendar number-of-weeks="5" start-date="StartDate" end-date="EndDate"></div>
       </div>
     </div>
+    <br><br>
     <div class="row">
       <div class="col-sm-2 col-sm-offset-5">
-        <p>$scope.StartDate = <mark>{{ StartDate | date:'shortDate' }}</mark></p>
-        <p>$scope.EndDate = <mark>{{ EndDate | date:'shortDate' }}</mark></p>
+        <p>$scope.StartDate = {{ StartDate | date:'shortDate' }}</p>
+        <p>$scope.EndDate = {{ EndDate | date:'shortDate' }}</p>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
