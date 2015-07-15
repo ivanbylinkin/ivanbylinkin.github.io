@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="SimpleCal">
   <head>
     <meta charset="UTF-8">
     <title>Ivanbylinkin.GitHub.io by ivanbylinkin</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body ng-controller="SimpleCalCtrl">
     <div simple-calendar number-of-weeks="5" start-date="StartDate" end-date="EndDate"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
