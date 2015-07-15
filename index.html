@@ -18,8 +18,8 @@
     </div>
     <div class="row">
       <div class="col-sm-2 col-sm-offset-5">
-        $scope.StartDate = {{ StartDate | date:'shortDate' }}
-        $scope.EndDate = {{ EndDate | date:'shortDate' }}
+        <p>$scope.StartDate = <mark>{{ StartDate | date:'shortDate' }}</mark></p>
+        <p>$scope.EndDate = <mark>{{ EndDate | date:'shortDate' }}</mark></p>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -28,8 +28,12 @@
     <script>
       var app = angular.module('DemoApp', ['simpleCalendar']);
       app.controller('DemoCtrl',function($scope){
-        $scope.StartDate = new Date();
-        $scope.EndDate = new Date();
+        var nextWeek = new Date(),
+        daysLater = new Date();
+        nextWeek.setDate(nextWeek.getDate()+7);
+        daysLater.setDate(nextWeek.getDate()+11);
+        $scope.StartDate = nextWeek;
+        $scope.EndDate = daysLater;
       })
     </script>
   </body>
