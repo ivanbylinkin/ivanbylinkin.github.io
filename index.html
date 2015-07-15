@@ -30,8 +30,8 @@
       app.controller('DemoCtrl',function($scope){
         var nextWeek = new Date(),
         daysLater = new Date();
-        nextWeek.setDate(nextWeek.getDate()+7);
-        daysLater.setDate(nextWeek.getDate()+11);
+        nextWeek.setDate(nextWeek.getDate()+7-nextWeek.getDay());
+        daysLater.setDate(daysLater.getDate()+12-daysLater.getDay());
         $scope.StartDate = nextWeek;
         $scope.EndDate = daysLater;
       })
